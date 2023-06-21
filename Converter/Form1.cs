@@ -110,13 +110,13 @@ namespace Converter
                 case (false):
                     if (sex == false)
                     {
-                        BindingSource bindSRC = new BindingSource(mSizes.Values, null);
+                        BindingSource bindSRC = new BindingSource(mSizesReversed.Keys, null);
                         comboBox1.DataSource = bindSRC;
                         comboBox1.Refresh();
                     }
                     else
                     {
-                        BindingSource bindSRC = new BindingSource(wSizes.Values, null);
+                        BindingSource bindSRC = new BindingSource(wSizesReversed.Keys, null);
                         comboBox1.DataSource = bindSRC;
                         comboBox1.Refresh();
                     }
@@ -197,6 +197,8 @@ namespace Converter
                     label3.Text = "";
                     break;
             }
+            radioButton2_CheckedChanged(sender, e);
+            radioButton1_CheckedChanged(sender, e);
             comBoxChange(defaultpose);
         }
     }
