@@ -12,6 +12,7 @@ namespace Converter
             InitializeComponent();
             comBoxChange(defaultpose);
         }
+        
         Dictionary<double, double> wSizes = new Dictionary<double, double>
             {
                 { 34.0, 21.0 },
@@ -200,6 +201,32 @@ namespace Converter
             radioButton2_CheckedChanged(sender, e);
             radioButton1_CheckedChanged(sender, e);
             comBoxChange(defaultpose);
+        }
+        string siPaz;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StreamWriter zaPis = new StreamWriter("D:\\VSWorks\\Converter\\zaPis.txt", true);
+            button1_Click(sender, e);
+            if (label3.Text != "")
+            {
+                if (defaultpose == true)
+                {
+                    if (sex == false) siPaz = $"{comboBox1.Text}(рус муж) - {label3.Text}(€п муж)";
+                    if (sex == true) siPaz = $"{comboBox1.Text}(рус жен) - {label3.Text}(€п жен)";
+                }
+                   
+                if (defaultpose == false)
+                {
+                    if (sex == true) siPaz = $"{comboBox1.Text}(€п жен) - {label3.Text}(рус жен)";
+                    if (sex == false) siPaz = $"{comboBox1.Text}(€п муж) - {label3.Text}(рус муж)";
+                }
+                    
+            }
+            if (siPaz != null || siPaz != "")
+            {
+                zaPis.WriteLine(siPaz);
+                zaPis.Close();
+            }
         }
     }
 }

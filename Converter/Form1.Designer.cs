@@ -37,6 +37,7 @@
             radioButton2 = new RadioButton();
             label3 = new Label();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -138,7 +139,7 @@
             // 
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(345, 360);
+            button2.Location = new Point(184, 360);
             button2.Name = "button2";
             button2.Size = new Size(108, 49);
             button2.TabIndex = 9;
@@ -146,11 +147,24 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Cursor = Cursors.Hand;
+            button3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(500, 360);
+            button3.Name = "button3";
+            button3.Size = new Size(108, 49);
+            button3.TabIndex = 10;
+            button3.Text = "СОХРАНИТЬ В ФАЙЛ";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Converter
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(radioButton2);
@@ -177,5 +191,6 @@
         private Label label3;
         internal ComboBox comboBox1;
         private Button button2;
+        private Button button3;
     }
 }
