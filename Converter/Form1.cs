@@ -11,6 +11,7 @@ namespace Converter
         {
             InitializeComponent();
             comBoxChange(defaultpose);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         
         Dictionary<double, double> wSizes = new Dictionary<double, double>
@@ -137,7 +138,7 @@ namespace Converter
 
         internal void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
